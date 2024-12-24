@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-bar">
+    <h1>To-Do App</h1>
+    <button id="toggle-dark-mode">🌙</button>
+  </div>
+  <div class="todo-app">
+    <header>
+      <h2>Create a Task</h2>
+      <div class="input-container">
+        <input type="text" id="new-task" placeholder="Add a new task..." />
+        <input type="date" id="task-date" />
+        <select id="task-priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="add-task">Add</button>
+      </div>
+    </header>
+    <main>
+      <div class="controls">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-task" placeholder="Search tasks..." />
+        </div>
+      </div>
+      <ul id="task-list"></ul>
+      <button id="clear-completed">Clear Completed Tasks</button>
+    </main>
+    <footer>
+      <p>Remaining Tasks: <span id="remaining-count">0</span></p>
+      <p></p>
+      <p>Made with love by Aditya</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
