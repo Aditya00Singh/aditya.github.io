@@ -3,47 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced To-Do App</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="menu-bar">
-    <h1>To-Do App</h1>
-    <button id="toggle-dark-mode">🌙</button>
-  </div>
-  <div class="todo-app">
-    <header>
-      <h2>Create a Task</h2>
-      <div class="input-container">
-        <input type="text" id="new-task" placeholder="Add a new task..." />
-        <input type="date" id="task-date" />
-        <select id="task-priority">
-          <option value="low">Low</option>
-          <option value="medium" selected>Medium</option>
-          <option value="high">High</option>
-        </select>
-        <button id="add-task">Add</button>
+  <div id="app">
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chat-screen" class="screen hidden">
+      <div id="friends-list">
+        <h3>Friends</h3>
+        <ul id="friend-requests"></ul>
+        <ul id="friends"></ul>
       </div>
-    </header>
-    <main>
-      <div class="controls">
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="active">Active</button>
-          <button class="filter-btn" data-filter="completed">Completed</button>
-        </div>
-        <div class="search-container">
-          <input type="text" id="search-task" placeholder="Search tasks..." />
-        </div>
+      <div id="chat-area">
+        <h3 id="chat-header">Chat</h3>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
       </div>
-      <ul id="task-list"></ul>
-      <button id="clear-completed">Clear Completed Tasks</button>
-    </main>
-    <footer>
-      <p>Remaining Tasks: <span id="remaining-count">0</span></p>
-      <p></p>
-      <p>Made with love by Aditya</p>
-    </footer>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
